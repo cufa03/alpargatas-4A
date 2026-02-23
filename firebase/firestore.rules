@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /products/{productId} {
+      allow read: if resource.data.isActive == true
+  || (request.auth != null && request.auth.token.email == "horacio.nadaf@gmail.com");
+
+      // IMPORTANT: Firestore rules no pueden leer variables de entorno del sitio.
+      // Reemplazá "ADMIN_EMAIL_AQUI" por tu email real de admin.
+      allow create, update, delete: if request.auth != null
+        && request.auth.token.email == "horacio.nadaf@gmail.com";
+    }
+  }
+}
