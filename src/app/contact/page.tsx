@@ -50,18 +50,18 @@ export default function ContactPage() {
             <CardTitle>Cómo pedir</CardTitle>
           </CardHeader>
           <CardContent className='space-y-3 text-sm text-muted-foreground'>
+            <p>1) Elegí los productos en el catálogo.</p>
+            <p>2) Enviá tu consulta por WhatsApp.</p>
             <p>
-              1) Elegí los productos en el catálogo. 2) Enviá tu consulta por
-              WhatsApp. 3) Te respondemos con disponibilidad, mínimo y tiempos.
+              3) Te respondemos con disponibilidad, oden minima y tiempos de
+              entrega.
             </p>
-
             <div className='rounded-md border bg-muted/30 p-3'>
               <p className='mb-2 text-xs font-medium text-foreground'>
                 Mensaje sugerido
               </p>
               <p className='whitespace-pre-wrap text-sm'>{template}</p>
             </div>
-
             <ContactActions
               template={template}
               whatsappUrl={buildWhatsappUrl(template)}

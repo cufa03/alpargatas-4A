@@ -4,10 +4,8 @@ export default function AboutPage() {
   return (
     <div className='space-y-6'>
       <div>
-        <h1 className='text-2xl font-semibold'>Nosotros</h1>
-        <p className='text-muted-foreground'>
-          Contenido estático editable (placeholder).
-        </p>
+        <h1 className='text-2xl font-semibold'>Sobre Nosotros</h1>
+        <p className='text-muted-foreground'>Fabrica de alpargatas.</p>
       </div>
 
       <Card>
@@ -16,13 +14,18 @@ export default function AboutPage() {
         </CardHeader>
         <CardContent className='space-y-3 text-muted-foreground'>
           <p>
-            Somos una fábrica de alpargatas enfocada en ventas mayoristas.
-            Trabajamos con producción por escala y ofrecemos distintas líneas
-            según necesidad.
+            Somos una fábrica de alpargatas dedicada a la venta mayorista.
+            Trabajamos con producción a escala y desarrollamos distintas líneas
+            según la necesidad de cada cliente.
           </p>
           <p>
-            Este texto es un placeholder: podés reemplazarlo con la historia
-            real, capacidad de producción, materiales y tiempos.
+            Nos enfocamos especialmente en la fabricación de alpargatas comunes
+            y reforzadas, con base de goma EVA y con base de PVC.
+          </p>
+          <p>
+            Brindamos atención directa, sin intermediarios, para ofrecer un
+            trato más ágil y personalizado. No dude en contactarnos para
+            resolver sus consultas. ¡Estamos listos para tomar su pedido!
           </p>
         </CardContent>
       </Card>
