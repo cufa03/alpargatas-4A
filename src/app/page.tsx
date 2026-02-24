@@ -62,22 +62,23 @@ export default async function Home() {
           <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-3'>
             {featured.map((p) => (
               <Link key={p.id} href={`/stock/${p.id}`} className='group'>
-                <Card className='h-full overflow-hidden'>
-                  <div className='aspect-4/3 w-full bg-muted'>
+                <Card className='h-auto overflow-hidden p-2 group-hover:scale-[1.02]'>
+                  <CardHeader>
+                    {/* <CardTitle className='line-clamp-4 pt-2'> */}
+                    <CardTitle className='font-bold pt-2'>{p.name}</CardTitle>
+                    {/* <p className='text-sm text-muted-foreground'>
+                      SKU: {p.sku}
+                    </p> */}
+                  </CardHeader>
+                  <div className='aspect-4/3 w-full bg-muted rounded-xl'>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.imageUrl}
                       alt={p.name}
-                      className='h-full w-full object-cover transition group-hover:scale-[1.01]'
+                      className='h-full w-full object-cover transition  rounded-xl'
                       loading='lazy'
                     />
                   </div>
-                  <CardHeader>
-                    <CardTitle className='line-clamp-1'>{p.name}</CardTitle>
-                    <p className='text-sm text-muted-foreground'>
-                      SKU: {p.sku}
-                    </p>
-                  </CardHeader>
                 </Card>
               </Link>
             ))}

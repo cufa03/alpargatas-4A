@@ -8,7 +8,7 @@ export default function StockPage() {
       <div>
         <h1 className='text-2xl font-semibold'>Catálogo</h1>
         <p className='text-muted-foreground'>
-          Filtrá por género y tipo. Buscá por nombre o SKU.
+          Filtrá por género y tipo. Buscá por nombre.
         </p>
       </div>
 

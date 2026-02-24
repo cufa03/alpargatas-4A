@@ -103,7 +103,7 @@ export function StockClient() {
       <div className='grid gap-3 md:grid-cols-3'>
         <div className={SHOW_FILTERS ? 'md:col-span-1' : 'md:col-span-3'}>
           <Input
-            placeholder='Buscar por nombre o SKU'
+            placeholder='Buscar por nombre'
             value={q}
             onChange={(e) => {
               const next = e.target.value;
@@ -232,9 +232,9 @@ export function StockClient() {
                     {p.gender}
                   </Badge>
                 </div>
-                <p className='mt-1 text-sm text-muted-foreground'>
+                {/* <p className='mt-1 text-sm text-muted-foreground'>
                   SKU: {p.sku}
-                </p>
+                </p> */}
                 <p className='mt-2 line-clamp-2 text-sm text-muted-foreground'>
                   {p.description}
                 </p>

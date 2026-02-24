@@ -21,14 +21,14 @@ export default async function ProductDetailPage(props: {
   const product = await getProductById(id);
   if (!product || !product.isActive) notFound();
 
-  const message = `Hello! I want to order wholesale. Product: ${product.name} (SKU: ${product.sku}). Please share availability and minimum order quantity.`;
+  const message = `Hola! Quiero agregar a mi orden el prducto ${product.name}. Por favor quiero saber disponibilidad y cantidad minima para realizar el pedido`;
 
   return (
     <div className='space-y-6'>
       <div className='flex flex-wrap items-center justify-between gap-3'>
         <div>
           <h1 className='text-2xl font-semibold'>{product.name}</h1>
-          <p className='text-muted-foreground'>SKU: {product.sku}</p>
+          {/* <p className='text-muted-foreground'>SKU: {product.sku}</p> */}
         </div>
         <div className='flex items-center gap-2'>
           <Badge variant='secondary'>{product.gender}</Badge>
@@ -38,7 +38,7 @@ export default async function ProductDetailPage(props: {
 
       <Card>
         <CardContent className='grid gap-6 p-6 md:grid-cols-2'>
-          <div className='aspect-[4/3] w-full overflow-hidden rounded-lg border bg-muted'>
+          <div className='aspect-4/3 w-full overflow-hidden rounded-lg border bg-muted'>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={product.imageUrl}
